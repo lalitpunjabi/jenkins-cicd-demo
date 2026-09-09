@@ -1,0 +1,81 @@
+# ==============================
+# Python
+# ==============================
+
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Python packaging
+*.egg
+*.egg-info/
+dist/
+build/
+
+# ==============================
+# Environment & Secrets
+# ==============================
+
+.env
+.env.*
+!.env.example
+
+# Secret/key files
+*.pem
+*.key
+*.crt
+secrets/
+credentials/
+
+# ==============================
+# Jenkins
+# ==============================
+
+# Jenkins workspace/local files
+jenkins_home/
+*.log
+
+# ==============================
+# Docker
+# ==============================
+
+# Docker override files
+docker-compose.override.yml
+
+# ==============================
+# Build / Package Artifacts
+# ==============================
+
+*.tar
+*.tar.gz
+*.zip
+
+# ==============================
+# IDE / Editor
+# ==============================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==============================
+# OS Generated Files
+# ==============================
+
+.DS_Store
+Thumbs.db
+desktop.ini
