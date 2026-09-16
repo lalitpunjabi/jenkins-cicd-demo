@@ -1,0 +1,13 @@
+.git
+.gitignore
+venv
+__pycache__
+*.pyc
+.pytest_cache
+screenshots_activity
+screenshots_task
+README_task.md
+README_activity.md
+security
+docs
+k8s
