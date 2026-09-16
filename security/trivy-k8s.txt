@@ -1,0 +1,37 @@
+
+Report Summary
+
+┌─────────────────┬────────────┬───────────────────┐
+│     Target      │    Type    │ Misconfigurations │
+├─────────────────┼────────────┼───────────────────┤
+│ configmap.yaml  │ kubernetes │         0         │
+├─────────────────┼────────────┼───────────────────┤
+│ deployment.yaml │ kubernetes │        10         │
+├─────────────────┼────────────┼───────────────────┤
+│ ingress.yaml    │ kubernetes │         0         │
+├─────────────────┼────────────┼───────────────────┤
+│ namespace.yaml  │ kubernetes │         0         │
+├─────────────────┼────────────┼───────────────────┤
+│ service.yaml    │ kubernetes │         0         │
+└─────────────────┴────────────┴───────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+deployment.yaml (kubernetes)
+============================
+Tests: 101 (SUCCESSES: 91, FAILURES: 10)
+Failures: 10 (UNKNOWN: 0, LOW: 6, MEDIUM: 3, HIGH: 1, CRITICAL: 0)
+
+KSV-0003 (LOW): Container 'jenkins-demo' of Deployment 'jenkins-demo' should add 'ALL' to 'securityContext.capabilities.drop'^M
+════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════^M
+The container should drop all default capabilities and add only those that are needed for its execution.^M
+^M
+See https://avd.aquasec.com/misconfig/ksv-0003^M
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────^M
+ deployment.yaml:28-66^M
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────^M
+  28 ┌         - name: jenkins-demo^M
+  29 │ ^M
+  30 │           image: lalit0409/jenkins-cicd-demo:latest^M
